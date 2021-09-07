@@ -10,11 +10,41 @@
 
 <body>
   <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-  <include src="./partials/navigation.html"></include>
-  <include src="./partials/01-gallery.html"></include>
-  <include src="./partials/02-video.html"></include>
-  <include src="./partials/03-feedback.html"></include>
-  <include src="./partials/example.html"></include>
+  <article class="example">
+  <h1>HTML-фрагменты</h1>
+
+  <!-- Путь к изображениям из HTML-фрагмента такой, как из файла index.html -->
+  <img src="/demo.3a1bb503.jpg" alt="" width="320">
+  <p>
+    Плагин
+    <a href="https://github.com/posthtml/posthtml-include" target="_blank" rel="noopener noreferrer">
+      posthtml-include
+    </a>
+    позволяет добавлять в HTML-файлы страниц код из других HTML-файлов (фрагментов). Фрагменты
+    хранятся в папке
+    <code>src/partials</code>. Добавление происходит при компиляции файлов страниц, например
+    <code>index.html</code>.
+  </p>
+
+  <p>
+    Этот файл <code>example.html</code> &mdash; пример такого фрагмента, с разметкой определённой
+    части главной страницы. Это очень удобно при командной разработке на студенческих проектах,
+    когда в одном HTML-файле пишет несколько человек сразу.
+  </p>
+
+  <p>
+    Синтаксис добавление фрагмента в главный файл:
+    <code> &lt;include src="./partials/имя-файла.html"&gt;&lt;/include&gt; </code>
+  </p>
+
+  <div class="background"></div>
+</article>
+
+  <ul>
+    <li><a href="/01-gallery.html">Image gallery</a></li>
+    <li><a href="/02-video.html">Video playback</a></li>
+    <li><a href="/03-feedback.html">Feedback form</a></li>
+</ul>
 
 
   <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
